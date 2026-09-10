@@ -1,8 +1,8 @@
 function startScanning() {
 
-    alert("Privacy Scanner will be available soon!");
-
+    window.location.href = "analysis.html";
 }
+
 
 
 function learnMore() {

@@ -5,214 +5,766 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Secure Persona | Privacy Protection</title>
+    <title>Secure Persona | Privacy Risk Detection</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- NAVIGATION -->
+
     <header class="navbar">
 
-        <div class="logo">
-            🔐 Secure Persona
+        <div class="brand">
+            <div class="brand-mark">SP</div>
+
+            <div class="brand-text">
+                <strong>Secure Persona</strong>
+                <span>Privacy Intelligence</span>
+            </div>
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
+        <nav class="nav-links">
+
+            <a href="#home" class="active">Home</a>
             <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
             <a href="#about">About</a>
-            <button class="login-btn" onclick="goToLogin()">
-                Login
+
+            <button class="nav-login" onclick="goToLogin()">
+                Sign In
             </button>
+
         </nav>
 
     </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- HERO SECTION -->
 
-        <div class="hero-content">
+    <main>
 
-            <p class="small-title">
-                AI-POWERED PRIVACY PROTECTION
-            </p>
+        <section class="hero" id="home">
 
-            <h1>
-                Protect Your
-                <span>Digital Identity</span>
-            </h1>
+            <div class="hero-content">
 
-            <p class="hero-text">
-                Detect sensitive information, understand your
-                privacy risk and prevent accidental data leakage
-                before you share it online.
-            </p>
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    AI-BASED PRIVACY PROTECTION
+                </div>
 
-            <div class="hero-buttons">
+                <h1>
+                    Protect your digital
+                    <span>identity.</span>
+                </h1>
 
-                <button class="primary-btn" onclick="startScanning()">
-                    Scan My Data
+                <p class="hero-text">
+
+                    Secure Persona intelligently detects sensitive
+                    information, evaluates privacy risks and helps
+                    prevent accidental data exposure before you share it.
+
+                </p>
+
+                <div class="hero-actions">
+
+                    <button class="primary-button" onclick="startScanning()">
+                        Analyze Your Data
+                        <span>→</span>
+                    </button>
+
+                    <button class="secondary-button" onclick="learnMore()">
+                        Explore Platform
+                    </button>
+
+                </div>
+
+                <div class="hero-note">
+
+                    <span>✓</span>
+                    Designed for privacy-aware individuals and organizations
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD PREVIEW -->
+
+            <div class="dashboard-container">
+
+                <div class="dashboard">
+
+                    <div class="dashboard-header">
+
+                        <div class="dashboard-title">
+
+                            <span class="small-label">
+                                PRIVACY MONITOR
+                            </span>
+
+                            <h3>
+                                Security Overview
+                            </h3>
+
+                        </div>
+
+                        <div class="protected-badge">
+                            <span></span>
+                            Protected
+                        </div>
+
+                    </div>
+
+
+                    <!-- RISK SCORE -->
+
+                    <div class="risk-section">
+
+                        <div class="risk-score">
+
+                            <div class="score-ring">
+
+                                <div class="score-center">
+
+                                    <strong>24</strong>
+
+                                    <span>/100</span>
+
+                                </div>
+
+                            </div>
+
+                            <span class="score-label">
+                                PRIVACY RISK
+                            </span>
+
+                        </div>
+
+
+                        <div class="risk-details">
+
+                            <span class="risk-status">
+                                LOW RISK
+                            </span>
+
+                            <h4>
+                                Your information is relatively protected.
+                            </h4>
+
+                            <p>
+                                Our analysis found limited exposure of
+                                sensitive information in the scanned content.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ANALYSIS -->
+
+                    <div class="analysis-header">
+
+                        <span>
+                            DETECTION SUMMARY
+                        </span>
+
+                        <span class="analysis-status">
+                            Analysis complete
+                        </span>
+
+                    </div>
+
+
+                    <div class="analysis-list">
+
+                        <div class="analysis-item">
+
+                            <div class="analysis-icon">
+                                ✓
+                            </div>
+
+                            <div class="analysis-info">
+
+                                <strong>
+                                    Personal Information
+                                </strong>
+
+                                <span>
+                                    No significant exposure
+                                </span>
+
+                            </div>
+
+                            <span class="safe-label">
+                                SAFE
+                            </span>
+
+                        </div>
+
+
+                        <div class="analysis-item">
+
+                            <div class="analysis-icon">
+                                ✓
+                            </div>
+
+                            <div class="analysis-info">
+
+                                <strong>
+                                    Contact Information
+                                </strong>
+
+                                <span>
+                                    Protected
+                                </span>
+
+                            </div>
+
+                            <span class="safe-label">
+                                SAFE
+                            </span>
+
+                        </div>
+
+
+                        <div class="analysis-item warning-item">
+
+                            <div class="analysis-icon warning-icon">
+                                !
+                            </div>
+
+                            <div class="analysis-info">
+
+                                <strong>
+                                    Digital Exposure
+                                </strong>
+
+                                <span>
+                                    Low exposure detected
+                                </span>
+
+                            </div>
+
+                            <span class="warning-label">
+                                REVIEW
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AI ASSESSMENT -->
+
+                    <div class="ai-assessment">
+
+                        <div class="ai-symbol">
+                            AI
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                AI Privacy Assessment
+                            </strong>
+
+                            <p>
+                                Your current privacy profile shows
+                                low digital exposure.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRUST BAR -->
+
+        <section class="trust-section">
+
+            <div class="trust-item">
+
+                <strong>AI</strong>
+                <span>Powered Analysis</span>
+
+            </div>
+
+            <div class="trust-line"></div>
+
+            <div class="trust-item">
+
+                <strong>PII</strong>
+                <span>Sensitive Data Detection</span>
+
+            </div>
+
+            <div class="trust-line"></div>
+
+            <div class="trust-item">
+
+                <strong>RISK</strong>
+                <span>Explainable Assessment</span>
+
+            </div>
+
+            <div class="trust-line"></div>
+
+            <div class="trust-item">
+
+                <strong>SECURE</strong>
+                <span>Privacy Focused</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="features-section" id="features">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CORE CAPABILITIES
+                </span>
+
+                <h2>
+                    Intelligent privacy protection,
+                    <span>built around your data.</span>
+                </h2>
+
+                <p>
+                    Secure Persona combines sensitive data detection,
+                    AI-based analysis and privacy risk assessment into
+                    one unified platform.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-top">
+
+                        <span class="feature-number">
+                            01
+                        </span>
+
+                        <div class="feature-icon">
+                            ◇
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Sensitive Data Detection
+                    </h3>
+
+                    <p>
+                        Identify personally identifiable and sensitive
+                        information such as contact details, financial
+                        information and other privacy-sensitive content.
+                    </p>
+
+                    <div class="feature-tags">
+
+                        <span>Email</span>
+                        <span>Phone</span>
+                        <span>Address</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-top">
+
+                        <span class="feature-number">
+                            02
+                        </span>
+
+                        <div class="feature-icon">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        AI Persona Prediction
+                    </h3>
+
+                    <p>
+                        Analyze privacy-related patterns to generate
+                        an understandable digital privacy profile
+                        based on observed exposure behaviour.
+                    </p>
+
+                    <div class="feature-tags">
+
+                        <span>Behaviour</span>
+                        <span>Exposure</span>
+                        <span>Profile</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-top">
+
+                        <span class="feature-number">
+                            03
+                        </span>
+
+                        <div class="feature-icon">
+                            +
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Data Leakage Prevention
+                    </h3>
+
+                    <p>
+                        Detect potential privacy exposure and provide
+                        recommendations that help users make safer
+                        decisions before sharing information.
+                    </p>
+
+                    <div class="feature-tags">
+
+                        <span>Detection</span>
+                        <span>Warning</span>
+                        <span>Protection</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-top">
+
+                        <span class="feature-number">
+                            04
+                        </span>
+
+                        <div class="feature-icon">
+                            %
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Privacy Risk Intelligence
+                    </h3>
+
+                    <p>
+                        Convert multiple privacy signals into a clear
+                        risk score so users can quickly understand
+                        the potential exposure of their information.
+                    </p>
+
+                    <div class="feature-tags">
+
+                        <span>Risk Score</span>
+                        <span>Analysis</span>
+                        <span>Insights</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+
+        <section class="process-section" id="how-it-works">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From data to
+                    <span>privacy insight.</span>
+                </h2>
+
+                <p>
+                    A simple analysis workflow designed to make
+                    privacy risks easier to understand.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Submit Data
+                    </h3>
+
+                    <p>
+                        Enter text or upload content that you want
+                        to analyze for potential privacy exposure.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Detect Sensitive Data
+                    </h3>
+
+                    <p>
+                        The system identifies information that may
+                        require additional privacy protection.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Assess Risk
+                    </h3>
+
+                    <p>
+                        Detected signals are evaluated to calculate
+                        an understandable privacy risk level.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Take Action
+                    </h3>
+
+                    <p>
+                        Receive recommendations to reduce unnecessary
+                        exposure before sharing your information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    ABOUT SECURE PERSONA
+                </span>
+
+                <h2>
+                    Privacy should be
+                    <span>understandable.</span>
+                </h2>
+
+                <p>
+                    Secure Persona is an AI-based privacy intelligence
+                    platform designed to help users understand how
+                    sensitive information can contribute to digital
+                    exposure.
+                </p>
+
+                <p>
+                    Instead of simply identifying sensitive data,
+                    the platform focuses on explaining the potential
+                    privacy impact and helping users make safer
+                    sharing decisions.
+                </p>
+
+            </div>
+
+
+            <div class="about-panel">
+
+                <div class="panel-row">
+
+                    <span>
+                        System Status
+                    </span>
+
+                    <strong>
+                        Operational
+                    </strong>
+
+                </div>
+
+                <div class="panel-row">
+
+                    <span>
+                        Detection Engine
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+                <div class="panel-row">
+
+                    <span>
+                        Risk Assessment
+                    </span>
+
+                    <strong>
+                        Enabled
+                    </strong>
+
+                </div>
+
+                <div class="panel-row">
+
+                    <span>
+                        Privacy Analysis
+                    </span>
+
+                    <strong>
+                        AI Assisted
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    PRIVACY FIRST
+                </span>
+
+                <h2>
+                    Before you share it,
+                    <span>understand it.</span>
+                </h2>
+
+                <p>
+                    Analyze your information and make more
+                    privacy-aware decisions.
+                </p>
+
+                <button class="primary-button" onclick="startScanning()">
+                    Start Privacy Analysis
+                    <span>→</span>
                 </button>
 
-                <button class="secondary-btn" onclick="learnMore()">
-                    Learn More
-                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    SP
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        Secure Persona
+                    </strong>
+
+                    <span>
+                        Privacy Intelligence
+                    </span>
+
+                </div>
 
             </div>
 
-        </div>
-
-
-        <!-- Privacy Card -->
-        <div class="privacy-card">
-
-            <div class="card-header">
-                <span>🛡️</span>
-                <div>
-                    <h3>Privacy Protection</h3>
-                    <p>AI Security Analysis</p>
-                </div>
-            </div>
-
-            <div class="risk-container">
-
-                <p>Current Privacy Risk</p>
-
-                <div class="risk-score">
-                    <strong>--</strong>
-                    <span>/100</span>
-                </div>
-
-                <div class="risk-bar">
-                    <div></div>
-                </div>
-
-                <p class="risk-status">
-                    Ready to scan
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-
-        <div class="section-title">
-
-            <p>WHAT WE PROTECT</p>
-
-            <h2>
-                Your Data. Your Privacy.
-            </h2>
-
-        </div>
-
-
-        <div class="feature-container">
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    🔍
-                </div>
-
-                <h3>
-                    Sensitive Data Detection
-                </h3>
-
-                <p>
-                    Detect personal information such as
-                    phone numbers, emails, addresses and
-                    other sensitive data.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    🧠
-                </div>
-
-                <h3>
-                    AI Persona Prediction
-                </h3>
-
-                <p>
-                    Understand your digital privacy behaviour
-                    and identify your potential privacy risk
-                    profile.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    🛡️
-                </div>
-
-                <h3>
-                    Data Leakage Prevention
-                </h3>
-
-                <p>
-                    Receive warnings and safer alternatives
-                    before sensitive information is shared.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About Section -->
-    <section class="about" id="about">
-
-        <div>
-
-            <p class="small-title">
-                WHY SECURE PERSONA?
-            </p>
-
-            <h2>
-                Privacy should be simple.
-            </h2>
 
             <p>
-                Secure Persona helps individuals understand
-                what personal information they are sharing
-                and the potential privacy risks associated
-                with it.
-            </p>
-
-            <p>
-                Our goal is simple: detect privacy risks
-                before information becomes a data leak.
+                AI-Based Secure Persona Prediction &
+                Data Leakage Prevention System
             </p>
 
         </div>
 
-    </section>
 
+        <div class="footer-bottom">
 
-    <!-- Footer -->
-    <footer>
+            <span>
+                © 2026 Secure Persona
+            </span>
 
-        <p>
-            © 2026 Secure Persona. AI-Powered Privacy Protection.
-        </p>
+            <span>
+                AI • Privacy • Security
+            </span>
+
+        </div>
 
     </footer>
 

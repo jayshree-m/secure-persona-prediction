@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Persona</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .navbar {
+            background: #111827;
+            color: white;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        .scanner-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        🔐 Secure Persona
+    </div>
+
+    <div class="container">
+
+        <h1>Protect Your Digital Identity</h1>
+
+        <p class="subtitle">
+            Detect sensitive information before you share it.
+        </p>
+
+        <div class="scanner-box">
+
+            <h2>Privacy Scanner</h2>
+
+            <textarea
+                id="userText"
+                placeholder="Enter text that you want to check...">
+            </textarea>
+
+            <br>
+
+            <button onclick="scanText()">
+                Scan My Data
+            </button>
+
+            <div class="result" id="result">
+                <h3>Privacy Risk</h3>
+                <p>No scan performed yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function scanText() {
+
+            const text = document.getElementById("userText").value;
+
+            if (text.trim() === "") {
+                alert("Please enter some text first.");
+                return;
+            }
+
+            document.getElementById("result").innerHTML = `
+                <h3>Privacy Risk</h3>
+                <p>Scanning your information...</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
